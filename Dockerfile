@@ -1,3 +1,5 @@
 FROM loadimpact/k6
 
-RUN k6 run ./brain
+COPY script.js .
+
+ENTRYPOINT ["k6", "run", "script.js"]
